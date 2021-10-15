@@ -1,0 +1,44 @@
+---
+title: "Functions testing"
+author: "AMCalejandro"
+date: "15/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(here)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+cat("Markdown absolute path", getwd() )
+cat("Top level project folder", here::here() )
+```
+
+# Description
+
+This is the markdown in which I test out all the developed functions under the R directory.
+Each section belongs to a different function
+
+
+# Extraction
+
+Extracting the middle character given a string, an dealing with even and odd characters
+
+
+TO IMPROVE. ALLOW a list of characters as input. Retrieve the a dictionary having the character as key, and the mid char as the key value
+
+
+```{r}
+source(here::here("R", "extraction.R"))
+
+string_even = "abcd"
+strin_odd = "abcde"
+
+extraction(string_even)
+extraction(strin_odd)
+
+```
+
