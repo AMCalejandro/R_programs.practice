@@ -1,6 +1,6 @@
 #' extraction
 #'
-#' Given a string, it gets the middle character dealing with even or paired strings
+#' Given a string, it gets the middle character differentiating even and odd strings
 #' 
 #' @param x The string contained on a vector
 #'
@@ -9,14 +9,14 @@
 #' @examples
 
 extraction  = function(x) {
-  
+  library(stringr)
   myLength = str_length(x)
   
   if (myLength == 0) {
     stop("string cannot have 0 length")
   }
   if (myLength %% 2 == 0) {# Getting the two mid Chars
-    miMidCar = str_sub(x, start = myLength - 1, end = myLength +1)
+    miMidCar = str_sub(x, start = myLength - 1, end = myLength + 1)
   }
 
   else {
@@ -24,3 +24,4 @@ extraction  = function(x) {
   }
   miMidCar
 }
+
