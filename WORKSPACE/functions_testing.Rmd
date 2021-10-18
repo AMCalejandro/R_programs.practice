@@ -40,5 +40,18 @@ strin_odd = "abcde"
 extraction(string_even)
 extraction(strin_odd)
 
+# With this function, we can easily apply the strategy over a list "lapply"
+vector_test = c("abcd", "abcde")
+list_test = list("abcd", "abcde")
+lapply(list_test, extraction)
+lapply(vector_test,extraction)
+
+
+# Errr testing
+
+null_string = ""
+extraction(null_string)
+
+
 ```
 
