@@ -15,6 +15,10 @@ extraction  = function(x) {
   if (myLength == 0) {
     stop("string cannot have 0 length")
   }
+  if (myLength <=2) {
+    stop("String length less than 2. This string does not have mid character")
+  }
+  
   if (myLength %% 2 == 0) {# Getting the two mid Chars
     miMidCar = str_sub(x, start = myLength - 1, end = myLength + 1)
   }
@@ -24,4 +28,6 @@ extraction  = function(x) {
   }
   miMidCar
 }
+
+
 
