@@ -54,4 +54,34 @@ extraction(null_string)
 
 
 ```
+```{r}
+source(here::here("R", "REGEX.R"))
+
+data_words = stringr::words
+
+# Words ending with "ed"
+ed_ending(data_words)
+
+#Words ending with either ise or ing
+ingIse_ending(data_words)
+
+```
+```{r}
+# Rpetitions
+
+source(here::here("R", "REGEX.R"))
+
+data_words = stringr::words
+
+# Starts with three consonants
+consonant_starter(data_words)
+
+# Have three or more vowels in a row.
+vowels_finder(data_words)
+vowels_finder(data_words, capital = "upper")
+
+# vowel-consonant finder
+vc_finder(data_words)
+
+```
 
